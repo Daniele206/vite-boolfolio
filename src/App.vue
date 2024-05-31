@@ -3,26 +3,36 @@
   import axios from 'axios';
   //axios
 
-  import Header from './components/Header.vue';
-  import Main from './components/Main.vue';
-  import Footer from './components/Footer.vue';
-
   export default {
-    components:{
-      Header,
-      Main,
-      Footer
-    },
     
+    data(){
+      return{
+        projects: []
+      }
+    },
+
+    methods:{
+      getApi(){
+        console.log('ciao');
+      }
+    },
+
+    mounted(){
+      this.getApi();
+    }
+
   }
 </script>
 
 
 <template>
-  <div>
-    <Header />
-    <Main />
-    <Footer />
+  <div class="main_container">
+    <div>
+      <h1 class="fw-bold mt-4">Lista Progetti</h1>
+      <ul>
+        <li></li>
+      </ul>
+    </div>
   </div>
 </template>
 
