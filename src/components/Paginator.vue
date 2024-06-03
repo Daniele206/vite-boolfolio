@@ -4,6 +4,8 @@
 // store
 
   export default {
+    name: 'paginator',
+
     props:{
       page: String,
       totPage: String
