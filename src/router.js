@@ -4,7 +4,6 @@ import Home from './pages/Home.vue';
 import Projects from './pages/Projects.vue';
 import Technologies from './pages/Technologies.vue';
 import Types from './pages/Types.vue';
-import TypeProjects from './pages/TypeProjects.vue';
 import Error404 from './pages/Error404.vue';
 
 const router = createRouter({
@@ -29,11 +28,6 @@ const router = createRouter({
       path: '/tipologie',
       name: 'types',
       component: Types
-    },
-    {
-      path: '/progetti-per-tipologie',
-      name: 'type-projects',
-      component: TypeProjects
     },
     {
       path: '/:pathMatch(.*)*',

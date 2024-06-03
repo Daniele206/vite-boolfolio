@@ -18,7 +18,7 @@
     <div>
       <h1 class="fw-bold mt-4 text-center">Vite Boolfolio</h1>
       <Nav />
-      <div class="container">
+      <div>
         <router-view></router-view>
       </div>
     </div>

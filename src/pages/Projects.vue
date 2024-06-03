@@ -32,7 +32,7 @@
 
     methods:{
       getApi(){
-        axios.get(this.store.apiUrl, {
+        axios.get(this.store.apiUrlProjects, {
           params: this.store.params
         })
           .then(result => {
@@ -55,7 +55,7 @@
 </script>
 
 <template>
-  <div>
+  <div class="container">
     <h1>Progetti</h1>
     <div v-if="redyReed">
       <div class="row justify-content-center">
