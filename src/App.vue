@@ -8,11 +8,13 @@
   // store
 
   import ProjectCard from './components/ProjectCard.vue';
+  import Paginator from './components/Paginator.vue';
 
   export default {
 
     components:{
-      ProjectCard
+      ProjectCard,
+      Paginator
     },
     
     data(){
@@ -41,16 +43,6 @@
             console.log(error);
           })
       },
-
-      pageswap(isNext){
-        if(isNext){
-          this.store.params.page++;
-        }else{
-          this.store.params.page--;
-        }
-        
-        this.getApi()
-      }
     },
 
     mounted(){
@@ -75,13 +67,12 @@
         </div>
       </div>
       <h4 v-else>Loading...</h4>
-      <nav v-if="redyReed" aria-label="Page navigation example">
-        <ul class="pagination">
-          <li v-if="page > 1" class="page-item"><button @click="pageswap(false)" class="page-link"><i class="fa-solid fa-caret-left"></i></button></li>
-          <li class="page-item"><p class="page-link">Pgina {{ page }} di {{ totPage }}</p></li>
-          <li v-if="page < totPage" class="page-item"><button @click="pageswap(true)" class="page-link"><i class="fa-solid fa-caret-right"></i></button></li>
-        </ul>
-      </nav>
+      <Paginator
+      v-if="redyReed"
+      :page="page"
+      :totPage="totPage"
+      @pageSwap="getApi()"
+      />
     </div>
   </div>
 </template>
