@@ -47,7 +47,7 @@
 </script>
 
 <template>
-  <div class="list_container">
+  <div class="my_container">
     <h1>Types</h1>
     <List v-if="redyReed" :objects="types"/>
     <h4 v-else>Loading...</h4>

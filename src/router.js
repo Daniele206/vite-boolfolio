@@ -4,6 +4,7 @@ import Home from './pages/Home.vue';
 import Projects from './pages/Projects.vue';
 import Technologies from './pages/Technologies.vue';
 import Types from './pages/Types.vue';
+import Show from './pages/Show.vue';
 import Error404 from './pages/Error404.vue';
 
 const router = createRouter({
@@ -28,6 +29,11 @@ const router = createRouter({
       path: '/tipologie',
       name: 'types',
       component: Types
+    },
+    {
+      path: '/Show/:slug',
+      name: 'show',
+      component: Show
     },
     {
       path: '/:pathMatch(.*)*',

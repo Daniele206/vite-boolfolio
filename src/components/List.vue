@@ -24,7 +24,7 @@
       <td>{{ object.name }}</td>
       <td>
         <ul class="list-group overflow-auto" style="height: 180px;">
-          <li class="list-group-item" v-for="(project, i) in object.projects" :key="i">{{ i }} - {{ project.name }}</li>
+          <li class="list-group-item" v-for="(project, i) in object.projects" :key="i">{{ i + 1}} - <router-link :to="{ name: 'show', params: {slug: project.slug} }">{{ project.name }}</router-link></li>
         </ul>
       </td>
     </tr>
