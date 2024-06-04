@@ -33,7 +33,7 @@
     methods:{
       getApi(){
         axios.get(this.store.apiUrlProjects, {
-          params: this.store.params
+          params: this.store.paramsProjects
         })
           .then(result => {
             this.redyReed = true;

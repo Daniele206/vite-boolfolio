@@ -49,7 +49,8 @@
 <template>
   <div class="list_container">
     <h1>Tecnologies</h1>
-    <List :objects="technologies"/>
+    <List v-if="redyReed" :objects="technologies"/>
+    <h4 v-else>Loading...</h4>
   </div>
 </template>
 

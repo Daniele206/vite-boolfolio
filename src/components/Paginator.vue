@@ -10,25 +10,24 @@
       page: String,
       totPage: String
     },
-    
-    methods:{
-      pageswap(isNext){
-        if(isNext){
-          this.store.params.page++;
-        }else{
-          this.store.params.page--;
-        }
-        
-        this.$emit('pageSwap')
-      }
-    },
 
     data(){
       return{
         store
       }
-    }
-
+    },
+    
+    methods:{
+      pageswap(isNext){
+        if(isNext){
+          this.store.paramsProjects.page++;
+        }else{
+          this.store.paramsProjects.page--;
+        }
+        
+        this.$emit('pageSwap')
+      }
+    },
   }
 </script>
 

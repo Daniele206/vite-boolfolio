@@ -49,7 +49,8 @@
 <template>
   <div class="list_container">
     <h1>Types</h1>
-    <List :objects="types"/>
+    <List v-if="redyReed" :objects="types"/>
+    <h4 v-else>Loading...</h4>
   </div>
 </template>
 
