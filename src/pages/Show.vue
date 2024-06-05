@@ -41,11 +41,11 @@
 </script>
 
 <template>
-  <div class="my_container">
+  <div v-if="redyReed" class="my_container">
     <h1 class="fw-bold">{{ project.name }}</h1>
     <h2>{{ project.type?.name }}</h2>
     <p>{{ project.description }}</p>
-    <ul v-if="project.technologies" class="list-unstyled p-0 ms-4">
+    <ul v-if="project.technologies.length > 0" class="list-unstyled p-0 ms-4">
       <h4 class="fw-bold">Tecnologie</h4>
       <li v-for="(technology, i) in project.technologies" :key="i">{{i + 1}} - {{technology.name}}</li>
     </ul>

@@ -10,6 +10,7 @@
     <router-link :to="{ name: 'projects' }" class="mx-2 px-3 btn btn-outline-dark rounded-0">Progetti</router-link>
     <router-link :to="{ name: 'technologies' }" class="mx-2 px-3 btn btn-outline-dark rounded-0">Tecnologie</router-link>
     <router-link :to="{ name: 'types' }" class="mx-2 px-3 btn btn-outline-dark rounded-0">Tipologie</router-link>
+    <router-link :to="{ name: 'contacts' }" class="mx-2 px-3 btn btn-outline-dark rounded-0">Contattaci</router-link>
   </div>
 </template>
 

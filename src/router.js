@@ -5,6 +5,7 @@ import Projects from './pages/Projects.vue';
 import Technologies from './pages/Technologies.vue';
 import Types from './pages/Types.vue';
 import Show from './pages/Show.vue';
+import Contacts from './pages/Contacts.vue';
 import Error404 from './pages/Error404.vue';
 
 const router = createRouter({
@@ -31,9 +32,14 @@ const router = createRouter({
       component: Types
     },
     {
-      path: '/Show/:slug',
+      path: '/show/:slug',
       name: 'show',
       component: Show
+    },
+    {
+      path: '/contacts',
+      name: 'contacts',
+      component: Contacts
     },
     {
       path: '/:pathMatch(.*)*',
